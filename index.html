@@ -2812,158 +2812,217 @@ body.dark-mode #themeToggle {
 
         /* Resizing a header */
 
-    /* ============================================ */
-/* MOBILE HEADER - PERFECT SIZE */
+  /* ============================================ */
+/* MOBILE HEADER - PERFECT BALANCE */
 /* ============================================ */
 
 @media (max-width: 768px) {
     header {
-        padding: 6px 0 4px !important;
+        padding: 8px 0 4px !important;
+        background: var(--black) !important;
     }
 
     header .container.header-container {
-        gap: 4px !important;
+        gap: 2px !important;
         padding-left: 8px !important;
         padding-right: 8px !important;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: auto 1fr auto;
         grid-template-areas:
-            "logo actions"
-            "nav nav";
+            "logo nav actions"
+            "categories categories categories";
+        align-items: center !important;
     }
 
-    /* Logo - slightly smaller but still visible */
+    /* Logo - full name visible */
     header .logo {
         gap: 6px !important;
+        flex-shrink: 0 !important;
     }
 
     header .logo-icon {
-        width: 34px !important;
-        height: 34px !important;
-        min-width: 34px !important;
-        font-size: 0.85rem !important;
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        font-size: 0.8rem !important;
     }
 
     header .logo-text h1 {
         font-size: 0.75rem !important;
-        max-width: 130px !important;
-        line-height: 1.1 !important;
+        max-width: none !important;
+        white-space: nowrap !important;
+        letter-spacing: 0 !important;
+        font-weight: 800 !important;
     }
 
     header .logo-text p {
-        font-size: 0.5rem !important;
+        font-size: 0.45rem !important;
         display: block !important;
-        line-height: 1 !important;
-        max-width: 130px !important;
+        white-space: nowrap !important;
+        opacity: 0.8 !important;
     }
 
-    /* Header actions - well spaced */
+    /* Navigation - inline with logo */
+    header .main-nav {
+        grid-area: nav !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: auto !important;
+        flex: 1 !important;
+        min-width: 0 !important;
+    }
+
+    header .main-nav .nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        gap: 3px !important;
+        padding: 2px 4px !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        min-height: 28px !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        scrollbar-width: none !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    header .main-nav .nav-links::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    header .main-nav .nav-links a {
+        flex: 0 0 auto !important;
+        padding: 4px 8px !important;
+        font-size: 0.55rem !important;
+        font-weight: 700 !important;
+        gap: 3px !important;
+        border-radius: 999px !important;
+        background: rgba(255,255,255,0.06) !important;
+        border: 1px solid rgba(255,255,255,0.06) !important;
+        white-space: nowrap !important;
+    }
+
+    header .main-nav .nav-links a i {
+        font-size: 0.55rem !important;
+        color: var(--accent) !important;
+    }
+
+    header .main-nav .nav-links a span {
+        font-size: 0.5rem !important;
+        font-weight: 700 !important;
+    }
+
+    /* Header actions - compact but visible */
     header .header-actions {
-        gap: 5px !important;
+        grid-area: actions !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+        flex-shrink: 0 !important;
     }
 
     header .menu-btn {
         padding: 5px 10px !important;
         font-size: 0.55rem !important;
-        min-height: 28px !important;
+        min-height: 26px !important;
         border-radius: 999px !important;
+        background: var(--primary) !important;
+        color: var(--white) !important;
+        font-weight: 700 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 4px !important;
     }
 
     header .menu-btn i {
-        font-size: 0.7rem !important;
+        font-size: 0.65rem !important;
+        color: var(--white) !important;
     }
 
     header .menu-btn span {
         display: inline !important;
         font-size: 0.5rem !important;
+        color: var(--white) !important;
     }
 
     header .cart-icon {
-        width: 32px !important;
-        height: 32px !important;
-        min-width: 32px !important;
-        font-size: 0.8rem !important;
+        width: 30px !important;
+        height: 30px !important;
+        min-width: 30px !important;
+        font-size: 0.75rem !important;
         border-radius: 50% !important;
+        background: rgba(255,255,255,0.08) !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
     }
 
     header .cart-count {
-        min-width: 16px !important;
-        height: 16px !important;
-        font-size: 0.5rem !important;
-        top: -4px !important;
-        right: -4px !important;
-        padding: 0 3px !important;
+        min-width: 15px !important;
+        height: 15px !important;
+        font-size: 0.45rem !important;
+        top: -3px !important;
+        right: -3px !important;
+        padding: 0 2px !important;
+        background: var(--primary) !important;
+        color: var(--white) !important;
     }
 
     header .order-btn {
         display: none !important;
     }
 
-    /* Navigation - clean and visible */
-    header .main-nav {
-        padding: 0 4px 4px !important;
-    }
-
-    header .main-nav .nav-links {
-        min-height: 32px !important;
-        padding: 4px 6px !important;
-        gap: 4px !important;
-        border-radius: 999px !important;
-        background: rgba(255,255,255,0.06) !important;
-        border: 1px solid rgba(255,255,255,0.08) !important;
-    }
-
-    header .main-nav .nav-links a {
-        padding: 5px 10px !important;
-        font-size: 0.55rem !important;
-        gap: 4px !important;
-        border-radius: 999px !important;
-        font-weight: 700 !important;
-    }
-
-    header .main-nav .nav-links a i {
-        font-size: 0.6rem !important;
-    }
-
-    header .main-nav .nav-links a span {
-        font-size: 0.5rem !important;
-    }
-
     /* Category nav adjustment */
     .category-nav {
-        top: 50px !important;
-        padding: 8px 0 !important;
+        top: 48px !important;
+        padding: 6px 0 !important;
     }
 
     .category-item {
-        padding: 5px 12px !important;
-        font-size: 0.55rem !important;
+        padding: 4px 10px !important;
+        font-size: 0.5rem !important;
+        border-radius: 999px !important;
     }
 
     .category-item i {
-        font-size: 0.7rem !important;
-        margin-bottom: 2px !important;
+        font-size: 0.65rem !important;
+        margin-bottom: 1px !important;
+    }
+
+    .category-item span {
+        font-size: 0.5rem !important;
+    }
+
+    /* Hide mobile progress bar */
+    .nav-mobile-progress {
+        display: none !important;
+    }
+
+    /* Hide mobile nav arrows */
+    .mobile-nav-arrow {
+        display: none !important;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     header .logo-text h1 {
         font-size: 0.65rem !important;
-        max-width: 80px !important;
     }
 
     header .logo-text p {
-        font-size: 0.45rem !important;
-        max-width: 80px !important;
+        font-size: 0.4rem !important;
     }
 
     header .menu-btn {
         padding: 4px 7px !important;
         font-size: 0.45rem !important;
-        min-height: 24px !important;
+        min-height: 22px !important;
     }
 
     header .menu-btn i {
-        font-size: 0.55rem !important;
+        font-size: 0.5rem !important;
     }
 
     header .menu-btn span {
@@ -2971,19 +3030,19 @@ body.dark-mode #themeToggle {
     }
 
     header .cart-icon {
-        width: 28px !important;
-        height: 28px !important;
-        min-width: 28px !important;
+        width: 26px !important;
+        height: 26px !important;
+        min-width: 26px !important;
         font-size: 0.65rem !important;
     }
 
     header .main-nav .nav-links a {
-        padding: 4px 7px !important;
+        padding: 3px 6px !important;
         font-size: 0.45rem !important;
     }
 
     header .main-nav .nav-links a i {
-        font-size: 0.5rem !important;
+        font-size: 0.45rem !important;
     }
 
     header .main-nav .nav-links a span {
