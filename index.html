@@ -2816,16 +2816,20 @@ body.dark-mode #themeToggle {
 /* MOBILE HEADER - PERFECT BALANCE */
 /* ============================================ */
 
+/* ============================================ */
+/* MOBILE HEADER - BIG & READABLE */
+/* ============================================ */
+
 @media (max-width: 768px) {
     header {
-        padding: 8px 0 4px !important;
-        background: var(--black) !important;
+        padding: 10px 0 6px !important;
+        min-height: 60px !important;
     }
 
     header .container.header-container {
-        gap: 2px !important;
-        padding-left: 8px !important;
-        padding-right: 8px !important;
+        gap: 4px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
         grid-template-columns: auto 1fr auto;
         grid-template-areas:
             "logo nav actions"
@@ -2833,21 +2837,21 @@ body.dark-mode #themeToggle {
         align-items: center !important;
     }
 
-    /* Logo - full name visible */
+    /* Logo - bigger and readable */
     header .logo {
-        gap: 6px !important;
+        gap: 8px !important;
         flex-shrink: 0 !important;
     }
 
     header .logo-icon {
-        width: 32px !important;
-        height: 32px !important;
-        min-width: 32px !important;
-        font-size: 0.8rem !important;
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+        font-size: 1rem !important;
     }
 
     header .logo-text h1 {
-        font-size: 0.75rem !important;
+        font-size: 0.9rem !important;
         max-width: none !important;
         white-space: nowrap !important;
         letter-spacing: 0 !important;
@@ -2855,13 +2859,14 @@ body.dark-mode #themeToggle {
     }
 
     header .logo-text p {
-        font-size: 0.45rem !important;
+        font-size: 0.55rem !important;
         display: block !important;
         white-space: nowrap !important;
-        opacity: 0.8 !important;
+        opacity: 0.85 !important;
+        font-weight: 500 !important;
     }
 
-    /* Navigation - inline with logo */
+    /* Navigation - bigger and readable */
     header .main-nav {
         grid-area: nav !important;
         padding: 0 !important;
@@ -2877,13 +2882,13 @@ body.dark-mode #themeToggle {
         flex-wrap: nowrap !important;
         justify-content: flex-start !important;
         align-items: center !important;
-        gap: 3px !important;
-        padding: 2px 4px !important;
+        gap: 5px !important;
+        padding: 4px 6px !important;
         background: transparent !important;
         border: none !important;
         box-shadow: none !important;
         border-radius: 0 !important;
-        min-height: 28px !important;
+        min-height: 34px !important;
         overflow-x: auto !important;
         overflow-y: hidden !important;
         scrollbar-width: none !important;
@@ -2896,103 +2901,106 @@ body.dark-mode #themeToggle {
 
     header .main-nav .nav-links a {
         flex: 0 0 auto !important;
-        padding: 4px 8px !important;
-        font-size: 0.55rem !important;
+        padding: 6px 12px !important;
+        font-size: 0.7rem !important;
         font-weight: 700 !important;
-        gap: 3px !important;
+        gap: 5px !important;
         border-radius: 999px !important;
-        background: rgba(255,255,255,0.06) !important;
-        border: 1px solid rgba(255,255,255,0.06) !important;
+        background: rgba(255,255,255,0.08) !important;
+        border: 1px solid rgba(255,255,255,0.08) !important;
         white-space: nowrap !important;
     }
 
     header .main-nav .nav-links a i {
-        font-size: 0.55rem !important;
+        font-size: 0.7rem !important;
         color: var(--accent) !important;
     }
 
     header .main-nav .nav-links a span {
-        font-size: 0.5rem !important;
+        font-size: 0.6rem !important;
         font-weight: 700 !important;
     }
 
-    /* Header actions - compact but visible */
+    /* Header actions - bigger buttons */
     header .header-actions {
         grid-area: actions !important;
         display: flex !important;
         align-items: center !important;
-        gap: 4px !important;
+        gap: 6px !important;
         flex-shrink: 0 !important;
     }
 
     header .menu-btn {
-        padding: 5px 10px !important;
-        font-size: 0.55rem !important;
-        min-height: 26px !important;
+        padding: 6px 14px !important;
+        font-size: 0.7rem !important;
+        min-height: 32px !important;
         border-radius: 999px !important;
         background: var(--primary) !important;
         color: var(--white) !important;
-        font-weight: 700 !important;
+        font-weight: 800 !important;
         display: flex !important;
         align-items: center !important;
-        gap: 4px !important;
+        gap: 5px !important;
     }
 
     header .menu-btn i {
-        font-size: 0.65rem !important;
+        font-size: 0.8rem !important;
         color: var(--white) !important;
     }
 
     header .menu-btn span {
         display: inline !important;
-        font-size: 0.5rem !important;
+        font-size: 0.6rem !important;
         color: var(--white) !important;
+        font-weight: 700 !important;
     }
 
     header .cart-icon {
-        width: 30px !important;
-        height: 30px !important;
-        min-width: 30px !important;
-        font-size: 0.75rem !important;
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        font-size: 0.95rem !important;
         border-radius: 50% !important;
-        background: rgba(255,255,255,0.08) !important;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+        background: rgba(255,255,255,0.1) !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2) !important;
     }
 
     header .cart-count {
-        min-width: 15px !important;
-        height: 15px !important;
-        font-size: 0.45rem !important;
-        top: -3px !important;
-        right: -3px !important;
-        padding: 0 2px !important;
+        min-width: 18px !important;
+        height: 18px !important;
+        font-size: 0.55rem !important;
+        top: -4px !important;
+        right: -4px !important;
+        padding: 0 3px !important;
         background: var(--primary) !important;
         color: var(--white) !important;
+        font-weight: 900 !important;
     }
 
     header .order-btn {
         display: none !important;
     }
 
-    /* Category nav adjustment */
+    /* Category nav - bigger and readable */
     .category-nav {
-        top: 48px !important;
-        padding: 6px 0 !important;
+        top: 56px !important;
+        padding: 8px 0 !important;
     }
 
     .category-item {
-        padding: 4px 10px !important;
-        font-size: 0.5rem !important;
+        padding: 6px 14px !important;
+        font-size: 0.6rem !important;
         border-radius: 999px !important;
+        font-weight: 700 !important;
     }
 
     .category-item i {
-        font-size: 0.65rem !important;
-        margin-bottom: 1px !important;
+        font-size: 0.8rem !important;
+        margin-bottom: 2px !important;
     }
 
     .category-item span {
-        font-size: 0.5rem !important;
+        font-size: 0.6rem !important;
     }
 
     /* Hide mobile progress bar */
@@ -3007,46 +3015,67 @@ body.dark-mode #themeToggle {
 }
 
 @media (max-width: 480px) {
+    header {
+        padding: 8px 0 4px !important;
+        min-height: 54px !important;
+    }
+
     header .logo-text h1 {
-        font-size: 0.65rem !important;
+        font-size: 0.8rem !important;
     }
 
     header .logo-text p {
-        font-size: 0.4rem !important;
-    }
-
-    header .menu-btn {
-        padding: 4px 7px !important;
-        font-size: 0.45rem !important;
-        min-height: 22px !important;
-    }
-
-    header .menu-btn i {
         font-size: 0.5rem !important;
     }
 
+    header .logo-icon {
+        width: 34px !important;
+        height: 34px !important;
+        min-width: 34px !important;
+        font-size: 0.85rem !important;
+    }
+
+    header .menu-btn {
+        padding: 5px 10px !important;
+        font-size: 0.6rem !important;
+        min-height: 28px !important;
+    }
+
+    header .menu-btn i {
+        font-size: 0.7rem !important;
+    }
+
     header .menu-btn span {
-        font-size: 0.4rem !important;
+        font-size: 0.5rem !important;
     }
 
     header .cart-icon {
-        width: 26px !important;
-        height: 26px !important;
-        min-width: 26px !important;
-        font-size: 0.65rem !important;
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        font-size: 0.85rem !important;
     }
 
     header .main-nav .nav-links a {
-        padding: 3px 6px !important;
-        font-size: 0.45rem !important;
+        padding: 5px 10px !important;
+        font-size: 0.6rem !important;
     }
 
     header .main-nav .nav-links a i {
-        font-size: 0.45rem !important;
+        font-size: 0.6rem !important;
     }
 
     header .main-nav .nav-links a span {
-        font-size: 0.4rem !important;
+        font-size: 0.5rem !important;
+    }
+
+    .category-item {
+        padding: 5px 12px !important;
+        font-size: 0.55rem !important;
+    }
+
+    .category-item i {
+        font-size: 0.7rem !important;
     }
 }
         
